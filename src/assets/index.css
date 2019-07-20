@@ -1,0 +1,38 @@
+body {
+  font-family: Consolas;
+  --receipt-width: 47ch;
+}
+
+.fiscal-device{
+  background-color: lightgray;
+  border-style: solid;
+  border-width: 0.5ch;
+  width: var(--receipt-width);
+  white-space: pre-wrap;
+}
+
+.line-display {
+  height: 2em;
+  width: var(--receipt-width);
+  white-space: pre-wrap;
+  font-size: 1.5em;
+  background-image: url(line-display-frame.png);
+  background-size: 1em 1em;
+  letter-spacing: 0.45em;
+  margin: 1em 0em;
+}
+
+.line-display::first-letter {
+  padding-left: 0.25em;
+}
+
+.receipt-output {
+  border-width: 0.5ch;
+  height: 60vh;
+  overflow-y: overlay;
+}
+
+button.cut-receipt-btn {
+  font-size: 1em;
+  width: calc(var(--receipt-width) + 1ch);
+}

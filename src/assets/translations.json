@@ -1,0 +1,34 @@
+{
+    "languages": [
+        {
+            "name": "English",
+            "code": "en"
+        },
+        {
+            "name": "Polski",
+            "code": "pl"
+        }
+    ],
+    "translation": {
+        "serialPortLabel": [
+            "Serial Port",
+            "Port"
+        ],
+        "connectBtnLabel": [
+            "Connect",
+            "Połącz"
+        ],
+        "disconnectBtnLabel": [
+            "Disconnect",
+            "Rozłącz"
+        ],
+        "cutTheReceiptBtn":[
+            "Cut The Receipt",
+            "Odcinanie Paragonu"
+        ],
+        "appLanguageLabel":[
+            "Language",
+            "Język"
+        ]
+    }
+}
