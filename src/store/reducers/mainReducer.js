@@ -29,7 +29,7 @@ const initialText = (receiptWidth) => {
     let result = [
         calculateLine(receiptWidth, '-'),
         calculateLine(receiptWidth, ' ', 'Here will appear output receipt text.'),
-        calculateLine(receiptWidth, ' ', 'You can remove this text by click on button.'),
+        calculateLine(receiptWidth, ' ', 'Click the button to remove this text.'),
         calculateLine(receiptWidth, '-'),
     ]
     return result.join('\n');
@@ -40,7 +40,7 @@ const initialmain = {
     initialApplicationmain: true,
     connectedToSimulatorService: false,
     connectedToFiscalPrinter: false,
-    receiptText: initialText(47),
+    receiptText: initialText(41),
     portName: '',
     avalibleCOMPorts: []
 };

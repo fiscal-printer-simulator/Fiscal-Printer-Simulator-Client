@@ -1,6 +1,6 @@
 body {
   font-family: Consolas;
-  --receipt-width: 47ch;
+  --receipt-width: 41ch;
 }
 
 .fiscal-device{
@@ -34,5 +34,5 @@ body {
 
 button.cut-receipt-btn {
   font-size: 1em;
-  width: calc(var(--receipt-width) + 1ch);
+  width: calc(var(--receipt-width) + 0.5ch);
 }
