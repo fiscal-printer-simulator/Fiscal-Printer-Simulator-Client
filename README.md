@@ -24,16 +24,7 @@ Steps:
 <Here some imgs of running app>
 
 ## Running the tests
-
-#### To run tests just run command `npm run test`
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+*  just run command `npm run test`
 
 ## Deployment
 
@@ -64,9 +55,3 @@ See also the list of [contributors](https://github.com/fiscal-printer-simulator/
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
