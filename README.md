@@ -40,11 +40,11 @@ Give an example
 Add additional notes about how to deploy this on a live system
 
 ## Built With
-* [React](https://github.com/facebook/react) - Main Library used in this app
-* [React-Redux](https://github.com/reduxjs/react-redux) - Flux central storage managment
+* [react](https://github.com/facebook/react) - Main Library used in this app
+* [react-redux](https://github.com/reduxjs/react-redux) - Flux central storage managment
 * [@giantmachines/redux-websocket](https://github.com/giantmachines/redux-websocket) - Websocket communication library cooperate with React-Redux library
 * [@material-ui/core](https://github.com/mui-org/material-ui) - for building uniwersal good looking design.
-* [electron.js](https://github.com/electron/electron) - for deploy exe file application easy to insert to msi file installer.
+* [electron](https://github.com/electron/electron) - for deploy exe file application easy to insert to msi file installer.
 
 
 ## Contributing
