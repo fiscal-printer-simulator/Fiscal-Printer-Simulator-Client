@@ -43,13 +43,9 @@ Add additional notes about how to deploy this on a live system
 * [React](https://github.com/facebook/react) - Main Library used in this app
 * [React-Redux](https://github.com/reduxjs/react-redux) - Flux central storage managment
 * [@giantmachines/redux-websocket](https://github.com/giantmachines/redux-websocket) - Websocket communication library cooperate with React-Redux library
-*[@material-ui/core](https://github.com/mui-org/material-ui) - for building uniwersal good looking design.
-*[electron.js](https://github.com/electron/electron) - for deploy exe file application easy to insert to msi file installer.
+* [@material-ui/core](https://github.com/mui-org/material-ui) - for building uniwersal good looking design.
+* [electron.js](https://github.com/electron/electron) - for deploy exe file application easy to insert to msi file installer.
 
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 ## Contributing
 
