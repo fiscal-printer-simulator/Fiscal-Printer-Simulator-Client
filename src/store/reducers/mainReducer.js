@@ -17,23 +17,18 @@ import {
 
 import {
     CHANGE_SELECTED_COM_PORT,
-    CUT_THE_RECIPT
+    CUT_THE_RECEIPT
 } from '../actions/fiscalPrinterServerCreatedActions';
 
 import calculateLine from '../../utils/createPaddingTextLine';
 
 const initialText = (receiptWidth) => {
-
-
-
-    let result = [
+    return [
         calculateLine(receiptWidth, '-'),
         calculateLine(receiptWidth, ' ', 'Here will appear output receipt text.'),
         calculateLine(receiptWidth, ' ', 'Click the button to remove this text.'),
         calculateLine(receiptWidth, '-'),
-    ]
-    return result.join('\n');
-
+    ].join('\n');
 }
 
 const initialmain = {
@@ -46,7 +41,6 @@ const initialmain = {
 };
 
 const mainReducer = (main = initialmain, action) => {
-    console.log(`Action ${action.type} received.`);
 
     switch (action.type) {
         case REDUX_WEBSOCKET_CONNECT:
@@ -68,16 +62,10 @@ const mainReducer = (main = initialmain, action) => {
                 connectedToFiscalPrinter: false
             };
 
-        case CUT_THE_RECIPT:
+        case CUT_THE_RECEIPT:
             return {
                 ...main,
                 receiptText: ''
-            };
-
-        case REDUX_WEBSOCKET_ERROR:
-            return {
-                ...main,
-                connectedToFiscalPrinter: false
             };
 
         case CHANGE_SELECTED_COM_PORT:
@@ -99,6 +87,7 @@ const mainReducer = (main = initialmain, action) => {
                 connectedToFiscalPrinter: true
             };
 
+        case REDUX_WEBSOCKET_ERROR:
         case CONNECT_TO_COM_PORT_FAILED:
         case DISCONNECT_FROM_COM_SUCCESS:
             return {

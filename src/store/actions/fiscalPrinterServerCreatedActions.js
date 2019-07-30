@@ -1,4 +1,4 @@
-export const CUT_THE_RECIPT = 'CUT_THE_RECIPT';
+export const CUT_THE_RECEIPT = 'CUT_THE_RECIPT';
 export const CONNECT_TO_COM_PORT = 'CONNECT_TO_COM_PORT';
 export const DISCONNECT_FROM_COM = 'DISCONNECT_FROM_COM';
 export const CHANGE_SELECTED_COM_PORT = 'CHANGE_SELECTED_COM_PORT';
@@ -29,7 +29,7 @@ export const TryConnectToComAction = (portName) => {
 }
 export const CreateCutReceiptAction = () => {
     return {
-        type: CUT_THE_RECIPT,
+        type: CUT_THE_RECEIPT,
         payload: {}
     };
 }
