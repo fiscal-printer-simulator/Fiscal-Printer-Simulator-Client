@@ -1,4 +1,5 @@
 # Fiscal Printer Simulator Client
+[![Build Status](https://travis-ci.org/fiscal-printer-simulator/Fiscal-Printer-Simulator-Client.svg?branch=master)](https://travis-ci.org/fiscal-printer-simulator/Fiscal-Printer-Simulator-Client)
 
 This is a client aplication for configure and see results of Fiscal Printer Simulator Service works.  
 Application builded with React, Redux and Electron.js libraries.
