@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Dialog, DialogTitle, DialogContent, DialogContentText } from '@material-ui/core';
+import { getTranslate } from 'react-localize-redux';
 
 export class ServiceDisconectedModal extends Component {
 
@@ -11,8 +12,7 @@ export class ServiceDisconectedModal extends Component {
                     <DialogTitle>Service Disconnected!</DialogTitle>
                     <DialogContent>
                         <DialogContentText>
-                            Please make sure that the service works.<br />
-                            The application will connect to it automatically.
+                            {this.props.Translate('disconnectWarningText')}
                         </DialogContentText>
                     </DialogContent>
                 </Dialog>
@@ -23,7 +23,8 @@ export class ServiceDisconectedModal extends Component {
 
 const mapStateToProps = (state) => ({
     webserviceDisconnected: state.main.connectedToSimulatorService,
-    isFirstCallToWebservice: state.main.initialApplicationState
+    isFirstCallToWebservice: state.main.initialApplicationState,
+    Translate: getTranslate(state.localize)
 });
 
 export default connect(mapStateToProps)(ServiceDisconectedModal)
