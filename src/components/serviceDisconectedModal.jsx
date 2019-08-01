@@ -9,7 +9,7 @@ export class ServiceDisconectedModal extends Component {
         return (
             <div>
                 <Dialog open={!this.props.webserviceDisconnected && !this.props.isFirstCallToWebservice}>
-                    <DialogTitle>Service Disconnected!</DialogTitle>
+                    <DialogTitle>{this.props.Translate('disconnectWarningTitle')}</DialogTitle>
                     <DialogContent>
                         <DialogContentText>
                             {this.props.Translate('disconnectWarningText')}

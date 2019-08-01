@@ -33,6 +33,10 @@
         "disconnectWarningText":[
             "Please make sure that the service works.\nThe application will connect to it automatically.",
             "Upewnij się, że usługa działa.\nAplikacja połączy się z nią automatycznie."
+        ],
+        "disconnectWarningTitle":[
+            "Service unavailable!",
+            "Usługa niedostępna!"
         ]
     }
 }
