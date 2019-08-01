@@ -22,8 +22,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "test:cov":"react-scripts test --coverage",
+    "test": "react-scripts test --watchAll=false",
+    "test:cov": "react-scripts test --coverage --watchAll=false",
+    "test:watch": "react-scripts test --watchAll=true",
     "eject": "react-scripts eject",
     "electron": "electron .",
     "electron-pack": "build --dir",
