@@ -1,8 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-const LineDisplay = () => {
-    return( <div className="fiscal-device line-display"/>);
+const LineDisplay = ({lineDisplayOutputText}) => {
+    return( <div className="fiscal-device line-display">{lineDisplayOutputText}</div>);
 }
 
-export default connect()(LineDisplay)
+const mapStateToProps = (state) => ({
+    lineDisplayOutputText: state.main.lineDisplayFirstLineText + '\n' + state.main.lineDisplaySecondLineText
+});
+
+export default connect(mapStateToProps)(LineDisplay)

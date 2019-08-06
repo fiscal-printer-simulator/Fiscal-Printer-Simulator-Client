@@ -6,6 +6,8 @@ import {
 } from '../actions/reduxWebsocketCoreActions';
 
 import {
+    RECEIVE_LINE_DISPLAY_FIRST_LINE_DATA,
+    RECEIVE_LINE_DISPLAY_SECOND_LINE_DATA,
     RECEIVED_AVALIBLE_COM_PORTS,
     CONNECT_TO_COM_PORT_FAILED,
     CONNECT_TO_COM_PORT_SUCCESS,
@@ -17,7 +19,8 @@ import {
 
 import {
     CHANGE_SELECTED_COM_PORT,
-    CUT_THE_RECEIPT
+    CUT_THE_RECEIPT,
+    OUTPUT_LOG_RECEIVED
 } from '../actions/fiscalPrinterServerCreatedActions';
 
 import calculateLine from '../../utils/createPaddingTextLine';
@@ -36,8 +39,11 @@ const initialmain = {
     connectedToSimulatorService: false,
     connectedToFiscalPrinter: false,
     receiptText: initialText(41),
+    lineDisplayFirstLineText: calculateLine(23, '-', ' Do zapłaty '),
+    lineDisplaySecondLineText: 'Suma:              0,00',
     portName: '',
-    avalibleCOMPorts: []
+    avalibleCOMPorts: [],
+    outputLogText: ''
 };
 
 const mainReducer = (main = initialmain, action) => {
@@ -107,6 +113,23 @@ const mainReducer = (main = initialmain, action) => {
                 ...main,
                 receiptText: main.receiptText + "\n" + action.payload.receiptText
             };
+
+        case RECEIVE_LINE_DISPLAY_FIRST_LINE_DATA:
+            return {
+                ...main,
+                lineDisplayFirstLineText: action.payload.lineDisplaySecondLineText
+            }
+
+        case RECEIVE_LINE_DISPLAY_SECOND_LINE_DATA:
+            return {
+                ...main,
+                lineDisplaySecondLineText: action.payload.lineDisplayFirstLineText
+            }
+        case OUTPUT_LOG_RECEIVED:
+            return {
+                ...main,
+                outputLogText: action.payload.logDate + ': ' + action.payload.logText + '\n'
+            }
 
         default:
             return main;

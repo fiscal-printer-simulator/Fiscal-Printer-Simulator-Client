@@ -3,7 +3,8 @@ import { TitleBarComponent } from './titleBar/index';
 import ReceiptOutputComponent from './receiptOutput';
 import ServiceDisconectedModal from './serviceDisconectedModal';
 import LineDisplay from './lineDisplay';
-
+import ServiceOutputLog from './serviceOutputLog';
+import { Grid } from '@material-ui/core';
 
 export class App extends Component {
   render() {
@@ -11,7 +12,14 @@ export class App extends Component {
       <div>
         <TitleBarComponent />
         <LineDisplay />
-        <ReceiptOutputComponent />
+        <Grid container>
+          <Grid item xs={6}>
+            <ReceiptOutputComponent />
+          </Grid>
+          <Grid item xs={6}>
+            <ServiceOutputLog />
+          </Grid>
+        </Grid>
         <ServiceDisconectedModal />
       </div>
     )

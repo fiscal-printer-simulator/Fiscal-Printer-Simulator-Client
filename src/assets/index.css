@@ -18,8 +18,9 @@ body {
   font-size: 1.5em;
   background-image: url(line-display-frame.png);
   background-size: 1em 1em;
-  letter-spacing: 0.45em;
+  letter-spacing: 0.44em;
   margin: 1em 0em;
+  padding-bottom: 0.2em;
 }
 
 .line-display::first-letter {
@@ -35,4 +36,18 @@ body {
 button.cut-receipt-btn {
   font-size: 1em;
   width: calc(var(--receipt-width) + 0.5ch);
+}
+
+.output-log{
+  margin-top: 23vh;
+}
+
+.output-log h2{
+  text-align: center;
+}
+
+.output-log .fiscal-device{
+  height: 31vh;
+  background-color: white;
+  overflow-y: overlay;
 }

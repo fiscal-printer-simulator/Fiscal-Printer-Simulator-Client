@@ -2,6 +2,7 @@ export const CUT_THE_RECEIPT = 'CUT_THE_RECIPT';
 export const CONNECT_TO_COM_PORT = 'CONNECT_TO_COM_PORT';
 export const DISCONNECT_FROM_COM = 'DISCONNECT_FROM_COM';
 export const CHANGE_SELECTED_COM_PORT = 'CHANGE_SELECTED_COM_PORT';
+export const OUTPUT_LOG_RECEIVED = 'OUTPUT_LOG_RECEIVED';
 
 
 export const ChangeSelectedCOMPort = (portName) => {
@@ -32,4 +33,15 @@ export const CreateCutReceiptAction = () => {
         type: CUT_THE_RECEIPT,
         payload: {}
     };
+}
+
+
+export const CreateOutputLogAction = (logText) => {
+    return {
+        type: OUTPUT_LOG_RECEIVED,
+        payload: {
+            logDate: new Date().toLocaleString(),
+            logText: logText
+        }
+    }
 }
