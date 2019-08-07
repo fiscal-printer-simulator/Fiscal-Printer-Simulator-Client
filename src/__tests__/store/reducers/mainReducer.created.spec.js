@@ -3,7 +3,8 @@ import {
     ChangeSelectedCOMPort,
     CreateCutReceiptAction,
     TryDisconnectFromCOMAction,
-    TryConnectToComAction
+    TryConnectToComAction,
+    CreateOutputLogAction
 } from '../../../store/actions/fiscalPrinterServerCreatedActions';
 
 const expectedInitialState = {
@@ -16,7 +17,10 @@ const expectedInitialState = {
         '  Click the button to remove this text.  \n' +
         '-----------------------------------------',
     portName: '',
-    avalibleCOMPorts: []
+    avalibleCOMPorts: [],
+    lineDisplayFirstLineText: "----- Do zapłaty ------",
+    lineDisplaySecondLineText: "Suma:              0,00",
+    outputLogText: ""
 }
 
 describe('main reducer - created actions by application', () => {
@@ -58,6 +62,19 @@ describe('main reducer - created actions by application', () => {
 
         expect(mainReducer(undefined, actionObject)).toEqual(expectedResult);
     });
+
+    it('should handle OUTPUT_LOG_RECEIVED Action',()=>{
+        let actualDate = new Date().toLocaleString();
+        let logText = 'Command xxx was handled successfully.';
+        let actionObject = CreateOutputLogAction(logText,actualDate);
+
+        let expectedResult = {
+            ...expectedInitialState,
+            outputLogText: actualDate + ': '+ logText+'\n'
+        }
+
+        expect(mainReducer(undefined,actionObject)).toEqual(expectedResult);
+    })
 
 
 });

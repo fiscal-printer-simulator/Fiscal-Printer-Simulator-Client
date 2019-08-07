@@ -117,13 +117,13 @@ const mainReducer = (main = initialmain, action) => {
         case RECEIVE_LINE_DISPLAY_FIRST_LINE_DATA:
             return {
                 ...main,
-                lineDisplayFirstLineText: action.payload.lineDisplaySecondLineText
+                lineDisplayFirstLineText: action.payload.lineDisplayFirstLineText
             }
 
         case RECEIVE_LINE_DISPLAY_SECOND_LINE_DATA:
             return {
                 ...main,
-                lineDisplaySecondLineText: action.payload.lineDisplayFirstLineText
+                lineDisplaySecondLineText: action.payload.lineDisplaySecondLineText
             }
         case OUTPUT_LOG_RECEIVED:
             return {

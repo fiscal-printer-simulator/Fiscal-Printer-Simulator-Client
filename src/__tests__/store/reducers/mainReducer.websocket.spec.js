@@ -21,7 +21,10 @@ const expectedInitialState = {
         '  Click the button to remove this text.  \n' +
         '-----------------------------------------',
     portName: '',
-    avalibleCOMPorts: []
+    avalibleCOMPorts: [],
+    lineDisplayFirstLineText: "----- Do zapłaty ------",
+    lineDisplaySecondLineText: "Suma:              0,00",
+    outputLogText: ""
 }
 
 describe('main reducer - websocket library actions', () => {

@@ -36,12 +36,9 @@ export const CreateCutReceiptAction = () => {
 }
 
 
-export const CreateOutputLogAction = (logText) => {
-    return {
+export const CreateOutputLogAction = (logText,logDate) => {
+    return  {
         type: OUTPUT_LOG_RECEIVED,
-        payload: {
-            logDate: new Date().toLocaleString(),
-            logText: logText
-        }
+        payload: { logDate,logText }
     }
 }

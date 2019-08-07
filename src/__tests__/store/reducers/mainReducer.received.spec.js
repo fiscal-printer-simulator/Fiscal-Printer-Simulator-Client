@@ -8,6 +8,8 @@ import {
     DISCONNECT_FROM_COM_SUCCESS,
     RECEIVED_AVALIBLE_COM_PORTS,
     RECEIVE_RECIPT_DATA,
+    RECEIVE_LINE_DISPLAY_FIRST_LINE_DATA,
+    RECEIVE_LINE_DISPLAY_SECOND_LINE_DATA
 } from '../../../store/actions/fiscalPrinterServerReceivedActions';
 
 const expectedInitialState = {
@@ -20,7 +22,10 @@ const expectedInitialState = {
         '  Click the button to remove this text.  \n' +
         '-----------------------------------------',
     portName: '',
-    avalibleCOMPorts: []
+    avalibleCOMPorts: [],
+    lineDisplayFirstLineText: "----- Do zapłaty ------",
+    lineDisplaySecondLineText: "Suma:              0,00",
+    outputLogText: ""
 }
 
 describe('main reducer - received actions from FP Simulator Service', () => {
@@ -131,4 +136,36 @@ describe('main reducer - received actions from FP Simulator Service', () => {
 
         expect(mainReducer(initialState, actionObject)).toEqual(expectedResult);
     });
-});
+
+
+    it('should handle  RECEIVE_LINE_DISPLAY_FIRST_LINE_DATA Action', () => {
+        let firstLineMessage = 'Some text for first line in line display';
+        let actionObject = {
+            type: RECEIVE_LINE_DISPLAY_FIRST_LINE_DATA,
+            payload:{
+                lineDisplayFirstLineText: firstLineMessage
+            }
+        };
+        let expectedResult = {
+            ...expectedInitialState,
+            lineDisplayFirstLineText: firstLineMessage
+        };
+
+        expect(mainReducer(undefined, actionObject)).toEqual(expectedResult);
+    });
+    it('should handle  RECEIVE_LINE_DISPLAY_SECOND_LINE_DATA Action', () => {
+        let secondLineMessage = 'Some text for second line in line display';
+        let actionObject = {
+            type: RECEIVE_LINE_DISPLAY_SECOND_LINE_DATA,
+            payload:{
+                lineDisplaySecondLineText: secondLineMessage
+            }
+        };
+        let expectedResult = {
+            ...expectedInitialState,
+            lineDisplaySecondLineText: secondLineMessage
+        };
+
+        expect(mainReducer(undefined, actionObject)).toEqual(expectedResult);
+    });
+});1
