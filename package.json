@@ -33,7 +33,8 @@
     "electron-pack-x86": "build --ia32",
     "preelectron-pack": "npm run build",
     "preelectron-pack-x64": "npm run build",
-    "preelectron-pack-x86": "npm run build"
+    "preelectron-pack-x86": "npm run build",
+    "preelectron-pack-x64-win":"npm run build"
   },
   "build": {
     "appId": "fiscal-printer-simulator.client",
