@@ -29,6 +29,7 @@
     "electron": "electron .",
     "electron-pack": "build --dir",
     "electron-pack-x64": "build --x64",
+    "electron-pack-x64-win": "build --x64 --win",
     "electron-pack-x86": "build --ia32",
     "preelectron-pack": "npm run build",
     "preelectron-pack-x64": "npm run build",
