@@ -11,8 +11,8 @@ const expectedInitialState = {
         '-----------------------------------------',
     portName: '',
     avalibleCOMPorts: [],
-    lineDisplayFirstLineText: "----- Do zapłaty ------",
-    lineDisplaySecondLineText: "Suma:              0,00",
+    lineDisplayOutputLineText: "----- Do zapłaty ------",
+    lineDisplayOutputLineText: "Suma:              0,00",
     outputLogText: ""
 }
 

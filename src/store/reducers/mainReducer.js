@@ -39,8 +39,8 @@ const initialmain = {
     connectedToSimulatorService: false,
     connectedToFiscalPrinter: false,
     receiptText: initialText(41),
-    lineDisplayFirstLineText: calculateLine(23, '-', ' Do zapłaty '),
-    lineDisplaySecondLineText: 'Suma:              0,00',
+    lineDisplayOutputLineText: calculateLine(23, '-', ' Do zapłaty '),
+    lineDisplayOutputLineText: 'Suma:              0,00',
     portName: '',
     avalibleCOMPorts: [],
     outputLogText: ''
@@ -117,13 +117,13 @@ const mainReducer = (main = initialmain, action) => {
         case RECEIVE_LINE_DISPLAY_FIRST_LINE_DATA:
             return {
                 ...main,
-                lineDisplayFirstLineText: action.payload.lineDisplayFirstLineText
+                lineDisplayOutputLineText: action.payload.lineDisplayOutputLineText
             }
 
         case RECEIVE_LINE_DISPLAY_SECOND_LINE_DATA:
             return {
                 ...main,
-                lineDisplaySecondLineText: action.payload.lineDisplaySecondLineText
+                lineDisplayOutputLineText: action.payload.lineDisplayOutputLineText
             }
         case OUTPUT_LOG_RECEIVED:
             return {
