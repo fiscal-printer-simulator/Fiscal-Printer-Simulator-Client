@@ -6,7 +6,7 @@ const LineDisplay = ({lineDisplayOutputText}) => {
 }
 
 const mapStateToProps = (state) => ({
-    lineDisplayOutputText: state.main.lineDisplayOutputLineText + '\n' + state.main.lineDisplayOutputLineText
+    lineDisplayOutputText: state.main.lineDisplayOutputFirstLineText + '\n' + state.main.lineDisplayOutputSecondLineText
 });
 
 export default connect(mapStateToProps)(LineDisplay)

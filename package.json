@@ -1,7 +1,7 @@
 {
   "name": "fiscal-printer-simulator-client",
   "productName": "Fiscal Printer Simulator Client",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "licence": "MIT",
   "description": "Client for Fiscal Printer Simulator Service",
   "author": "Michal Wojcik m.mwojcik@outlook.com",
@@ -34,7 +34,7 @@
     "preelectron-pack": "npm run build",
     "preelectron-pack-x64": "npm run build",
     "preelectron-pack-x86": "npm run build",
-    "preelectron-pack-x64-win":"npm run build"
+    "preelectron-pack-x64-win": "npm run build"
   },
   "build": {
     "appId": "fiscal-printer-simulator.client",

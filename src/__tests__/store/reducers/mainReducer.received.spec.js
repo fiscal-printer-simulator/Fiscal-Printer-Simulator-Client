@@ -23,8 +23,8 @@ const expectedInitialState = {
         '-----------------------------------------',
     portName: '',
     avalibleCOMPorts: [],
-    lineDisplayOutputLineText: "----- Do zapłaty ------",
-    lineDisplayOutputLineText: "Suma:              0,00",
+    lineDisplayOutputFirstLineText: "----- Do zapłaty ------",
+    lineDisplayOutputSecondLineText: "Suma:              0,00",
     outputLogText: ""
 }
 
@@ -148,7 +148,7 @@ describe('main reducer - received actions from FP Simulator Service', () => {
         };
         let expectedResult = {
             ...expectedInitialState,
-            lineDisplayOutputLineText: firstLineMessage
+            lineDisplayOutputFirstLineText: firstLineMessage
         };
 
         expect(mainReducer(undefined, actionObject)).toEqual(expectedResult);
@@ -163,7 +163,7 @@ describe('main reducer - received actions from FP Simulator Service', () => {
         };
         let expectedResult = {
             ...expectedInitialState,
-            lineDisplayOutputLineText: secondLineMessage
+            lineDisplayOutputSecondLineText: secondLineMessage
         };
 
         expect(mainReducer(undefined, actionObject)).toEqual(expectedResult);
