@@ -40,6 +40,7 @@ button.cut-receipt-btn {
 
 .output-log{
   margin-top: 23vh;
+  display:none;
 }
 
 .output-log h2{
